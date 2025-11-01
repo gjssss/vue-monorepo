@@ -1,18 +1,10 @@
 {
-  "name": "tsdown-starter",
+  "name": "@placeholder/ts-lib",
   "type": "module",
   "version": "0.0.0",
-  "description": "A starter for creating a TypeScript package.",
-  "author": "Author Name <author.name@mail.com>",
+  "description": "placeholder desc for ts-lib",
+  "author": "<auther>",
   "license": "MIT",
-  "homepage": "https://github.com/author/library#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/author/library.git"
-  },
-  "bugs": {
-    "url": "https://github.com/author/library/issues"
-  },
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
