@@ -1,5 +1,5 @@
 import { Buffer } from 'node:buffer'
-import fs from 'node:fs/promises'
+import fs, { mkdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import c from 'ansis'
@@ -61,6 +61,7 @@ export async function buildCSS() {
       },
       minify: MINIFY,
     })
+    await mkdir(GENERATED_CSS.split('/').slice(0, -1).join('/'), { recursive: true })
     await fs.writeFile(GENERATED_CSS, String(css))
     console.log(`${c.green('✓')} CSS built`)
 
