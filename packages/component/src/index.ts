@@ -1,3 +1,3 @@
 import './.generated/uno.css'
 
-export * from './components/MyCounter'
+export * from './components'

@@ -20,11 +20,9 @@
     "dist"
   ],
   "scripts": {
-    "build:css": "tsx scripts/build-css.ts",
-    "build": "tsdown --config-loader=tsx",
-    "dev": "tsdown --watch --config-loader=tsx",
+    "build": "export NODE_ENV=production && tsdown --config-loader=tsx",
+    "dev": "export NODE_ENV=development && tsdown --watch --config-loader=tsx",
     "lint": "eslint",
-    "play": "nr -C playground dev",
     "prepublishOnly": "nr build",
     "release": "bumpp",
     "test": "vitest",

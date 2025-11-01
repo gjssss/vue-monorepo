@@ -16,8 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
+    "build": "export NODE_ENV=production && tsdown",
+    "dev": "export NODE_ENV=development && tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
