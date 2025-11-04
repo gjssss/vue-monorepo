@@ -1,3 +1,4 @@
+import path from 'node:path'
 import process from 'node:process'
 import { defineConfig } from 'tsdown'
 import Vue from 'unplugin-vue/rolldown'
@@ -16,6 +17,9 @@ export default defineConfig({
   plugins: [
     Vue(),
   ],
+  alias: {
+    '@': path.resolve(__dirname, 'src'),
+  },
   treeshake: true,
   minify: process.env.NODE_ENV === 'production',
   clean: process.env.NODE_ENV === 'production',
